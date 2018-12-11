@@ -17,6 +17,13 @@ int main()
 
         switch (fact[i])
         {
+
+            case 0:
+            {
+                fact[i] = 1;
+                break;
+            }
+
             case 1:
             {
                 fact[i] = 1;
