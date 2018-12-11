@@ -39,7 +39,7 @@ int main()
 
             case 3:
             {
-                fact[i] = 3;
+                fact[i] = 6;
                 break;
             }
 
