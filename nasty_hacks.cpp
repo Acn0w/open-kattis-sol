@@ -13,7 +13,6 @@ not matter = 2 M
 
 int main()
 {
-    string primo, secondo, terzo;
     char s[MAX];
     int n,r,e,c;
 
@@ -21,12 +20,9 @@ int main()
 
     for (int i=0;i<n;i++)
     {
-        cin >> primo;
-        r = stoi(primo.substr(0));
-        cin >> secondo;
-        e  = stoi(secondo.substr(0));
-        cin >> terzo;
-        c  = stoi(terzo.substr(0));
+        cin >> r;
+        cin >> e;
+        cin >> c;
 
         if(r == (e - c))
             s[n]='m';
