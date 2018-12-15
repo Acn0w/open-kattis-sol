@@ -2,7 +2,6 @@
 #include <string>
 
 using namespace std;
-#define MAX 100
 
 /*
 advertise = 0 E
