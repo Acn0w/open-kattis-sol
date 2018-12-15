@@ -1,69 +1,25 @@
 #include <iostream>
 #include <string>
+#include <algorithm> 
 
 using namespace std;
-void sort (char&,char&,char&);
 
 int main()
 {
-    char uno,due,tre;
+    int v[3], o[3];
     string s;
-    char c[3];
 
-    cin >> uno;
-    cin >> due;
-    cin >> tre;
+    for(int i = 0; i < 3; i++) cin >> v[i];
+
     cin >> s;
 
-    sort(uno,due,tre);
+    sort(v, v + 3);
 
-    c[s.find("A")]=uno;
-    c[s.find("B")]=due;
-    c[s.find("C")]=tre;
+    o[s.find("A")] = v[0];
+    o[s.find("B")] = v[1];
+    o[s.find("C")] = v[2];
 
-    for(int i =0;i<3;i++)
-        cout << c[i]<<" ";
+    for(int i = 0; i < 3; i++) cout << o[i] << " " ;
 
     return 0;
-}
-
-
-void sort(char& x, char& y, char& z)
-{
-    if (y < x)
-    {
-        if (z < x)
-        {
-            if (z < y)
-            {
-                swap(x, z);
-            }
-            else
-            {
-                char tmp = std::move(x);
-                x = std::move(y);
-                y = std::move(z);
-                z = std::move(tmp);
-            }
-        } else
-        {
-            swap(x, y);
-        }
-    } else
-    {
-        if (z < y)
-        {
-            if (z < x)
-            {
-                char tmp = std::move(z);
-                z = std::move(y);
-                y = std::move(x);
-                x = std::move(tmp);
-            }
-            else
-            {
-                swap(y, z);
-            }
-        }
-    }
 }
